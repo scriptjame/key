@@ -3,23 +3,83 @@
 
 <head>
 <title>Script Key</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+.box{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 30px rgba(0,0,0,0.5);
+width:350px;
+}
+
+h1{
+margin-bottom:25px;
+}
+
+.keybox{
+background:#111;
+border:2px solid #444;
+padding:12px;
+border-radius:10px;
+font-size:18px;
+width:100%;
+text-align:center;
+color:white;
+margin-bottom:20px;
+}
+
+button{
+background:#6a5cff;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+font-size:16px;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#8b7bff;
+transform:scale(1.05);
+}
+
+</style>
 </head>
 
-<body style="background:black;color:white;text-align:center;font-family:sans-serif">
+<body>
+
+<div class="box">
 
 <h1>Your Script Key</h1>
 
-<input id="keybox" value="saers23kad34" readonly style="font-size:20px;text-align:center">
+<input class="keybox" id="keybox" value="saers23kad34" readonly>
 
-<br><br>
+<br>
 
-<button onclick="copyKey()">COPY KEY</button>
+<button onclick="copyKey()">Copy Key</button>
+
+</div>
 
 <script>
 
 function copyKey(){
 
-let key = document.getElementById("keybox")
+let key=document.getElementById("keybox")
 
 key.select()
 
@@ -32,4 +92,5 @@ alert("Key copied!")
 </script>
 
 </body>
+
 </html>
