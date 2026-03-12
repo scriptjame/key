@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Script Key</title>
+</head>
+
+<body style="background:black;color:white;text-align:center;font-family:sans-serif">
+
+<h1>Your Script Key</h1>
+
+<input id="keybox" value="saers23kad34" readonly style="font-size:20px;text-align:center">
+
+<br><br>
+
+<button onclick="copyKey()">COPY KEY</button>
+
+<script>
+
+function copyKey(){
+
+let key = document.getElementById("keybox")
+
+key.select()
+
+document.execCommand("copy")
+
+alert("Key copied!")
+
+}
+
+</script>
+
+</body>
+</html>
