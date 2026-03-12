@@ -79,7 +79,11 @@ let charset="abcdefghijklmnopqrstuvwxyz0123456789"
 
 let d=new Date()
 
-let seed=d.getDate()+(d.getMonth()+1)*50+d.getFullYear()*1000
+let day=d.getUTCDate()
+let month=d.getUTCMonth()+1
+let year=d.getUTCFullYear()
+
+let seed=day+(month*50)+(year*1000)
 
 let key=""
 
