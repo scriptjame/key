@@ -65,7 +65,7 @@ background:#6d7cff;
 
 <h1>Key</h1>
 
-<div class="key" id="key"></div>
+<div class="key">8s201kbvyj4d</div>
 
 <button onclick="copyKey()">Copy</button>
 
@@ -73,39 +73,9 @@ background:#6d7cff;
 
 <script>
 
-function generateKey(){
-
-let charset="abcdefghijklmnopqrstuvwxyz0123456789"
-
-let d=new Date()
-
-let day=d.getUTCDate()
-let month=d.getUTCMonth()+1
-let year=d.getUTCFullYear()
-
-let seed=day+(month*50)+(year*1000)
-
-let key=""
-
-for(let i=0;i<12;i++){
-
-let index=(seed+i*7)%charset.length
-
-key+=charset[index]
-
-}
-
-return key
-
-}
-
-let todayKey=generateKey()
-
-document.getElementById("key").innerText=todayKey
-
 function copyKey(){
 
-navigator.clipboard.writeText(todayKey)
+navigator.clipboard.writeText("8s201kbvyj4d")
 
 alert("Key copied!")
 
