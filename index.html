@@ -65,7 +65,7 @@ background:#6d7cff;
 
 <h1>Key</h1>
 
-<div class="key">8s201kbvyj4d</div>
+<div class="key" id="key">Loading...</div>
 
 <button onclick="copyKey()">Copy</button>
 
@@ -73,9 +73,21 @@ background:#6d7cff;
 
 <script>
 
+let currentKey = ""
+
+fetch("https://raw.githubusercontent.com/scriptjame/key/main/key.txt")
+.then(res => res.text())
+.then(data => {
+
+currentKey = data.trim()
+
+document.getElementById("key").innerText = currentKey
+
+})
+
 function copyKey(){
 
-navigator.clipboard.writeText("8s201kbvyj4d")
+navigator.clipboard.writeText(currentKey)
 
 alert("Key copied!")
 
