@@ -81,15 +81,11 @@ let d=new Date()
 
 let seed=d.getDate()+(d.getMonth()+1)*50+d.getFullYear()*1000
 
-let random=seed
-
 let key=""
 
 for(let i=0;i<12;i++){
 
-random=(random*9301+49297)%233280
-
-let index=Math.floor((random/233280)*charset.length)
+let index=(seed+i*7)%charset.length
 
 key+=charset[index]
 
